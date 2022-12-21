@@ -1,0 +1,459 @@
+.panel .panelMain .panelMain-header {
+    height: 138vh;
+    background-size: cover;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    display: flex;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-text {
+    text-align: center;
+    margin-top: 5.6rem;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-text h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-text p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units {
+    display: flex;
+    color: var(--white);
+    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-unit {
+    padding: 0 3rem;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-unit h1 {
+    font-size: 1.7rem;
+    font-weight: lighter;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-unit p {
+    font-size: .7rem;
+    margin-top: 1rem;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-units-btn * {
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-units-btn button {
+    width: 12rem;
+    transition: var(--transition);
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-units-btn button a {
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+.panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-units-btn button:hover a {
+    background-color: white;
+    color: black;
+}
+
+.panel .panelMain .future .panelMain-future {
+    background-size: cover;
+    height: 128vh;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+.panel .about {
+    display: grid;
+    grid-template-columns: 40% auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.panel .about .about-left p {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+}
+
+.panel .about .about-left h1 {
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.panel .about .about-left .about-left-btn * {
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+.panel .about .about-left .about-left-btn button {
+    width: 12rem;
+    margin: 1rem 0 1rem 0;
+    transition: var(--transition);
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.panel .about .about-left .about-left-btn button a {
+    display: block;
+    padding: .6rem 0;
+}
+
+.panel .about .about-left .about-left-btn button:hover {
+    background-color: aliceblue;
+}
+
+.panel .about .about-left .about-left-btn button:first-child {
+    width: 12rem;
+    padding: 0;
+    margin: 2rem 0 1rem 0;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.panel .about .about-left .about-left-btn button:first-child a {
+    transition: var(--transition);
+}
+
+.panel .about .about-left .about-left-btn button:hover:first-child a {
+    background-color: black;
+    color: white !important;
+}
+
+.panel .about .about-right p {
+    font-size: 1rem;
+    line-height: 22px;
+    color: grey;
+}
+
+.panel .about .about-right p a {
+    color: black;
+    text-decoration: underline;
+}
+
+.panel .about .about-right {
+    height: 100%;
+    width: 100%;
+}
+
+.panel .about .about-right img {
+    height: 100%;
+    /* object-fit: fill; */
+    width: 100%;
+}
+
+.panel .range {
+    display: grid;
+    grid-template-columns: 26rem auto;
+    padding: 0;
+    height: 100vh;
+    margin-bottom: 4rem;
+    width: 100vw;
+}
+
+.panel .range .range-left {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    display: block;
+}
+
+.panel .range .range-left {
+    width: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.panel .range .range-right {
+    padding: 2rem 1.5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel .range .range-right .range-right-text h4 {
+    font-size: 1.1rem;
+    margin-bottom: .6rem;
+    font-weight: lighter;
+}
+
+.panel .range .range-right .range-right-text h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.panel .range .range-right .range-right-text p {
+    font-size: .83rem;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+
+.panel .range .range-right .range-right-text p a {
+    color: black;
+    text-decoration: underline;
+}
+
+.panel .range .range-right .range-right-btn {
+    width: 100%;
+}
+
+.panel .range .range-right .range-right-btn * {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.panel .range .range-right .range-right-btn button:nth-child(2) {
+    padding: .7rem 0;
+    background-color: rgb(238, 238, 238);
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.panel .range .range-right .range-right-btn button:hover:nth-child(2) {
+    background-color: rgb(222, 222, 222);
+}
+
+.panel .range .range-right .range-right-btn button:first-child {
+    border: 2px solid black;
+    border-radius: 4px;
+    transition: var(--transition);
+    background-color: transparent;
+}
+
+.panel .range .range-right .range-right-btn button:hover:first-child {
+    background-color: black;
+}
+
+.panel .range .range-right .range-right-btn button a {
+    padding: .8rem 0;
+    transition: var(--transition);
+    color: black;
+}
+
+.panel .range .range-right .range-right-btn button a:hover {
+    background-color: black;
+    color: white;
+}
+
+.panel .phone-img {
+    width: 100vw;
+    height: 160vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    display: block;
+}
+
+.panel .description {
+    background-color: black;
+    display: grid;
+    color: white;
+    grid-template-columns: 53% auto;
+}
+
+.panel .description .description-right {
+    padding-top: 3rem;
+}
+
+.panel .description .description-right .description-right-heading h1 {
+    font-weight: lighter;
+    font-size: 1.8rem;
+}
+
+.panel .description .description-right .description-right-units {
+    display: flex;
+    align-items: center;
+    gap: 7.5rem;
+}
+
+.panel .description .description-right .description-right-units h1 {
+    font-weight: lighter;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.panel .description .description-right .description-right-units small {
+    color: grey;
+}
+
+.panel .description .description-right .description-right-units .description-right-unit {
+    margin-bottom: 1rem;
+}
+
+.panel .description .description-left {
+    background-position: center;
+    background-size: 100%;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+.panel .description .descBtn {
+    text-align: center;
+    margin: 3rem 0;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel .description .descBtn button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: .5rem 4rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 4px;
+}
+
+.panel .description .descBtn button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 1026px) {
+    .panel .description {
+        display: grid;
+        /* overflow: hidden; */
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .panel .description .description-left {
+        height: 70vh;
+        background-size: cover;
+        object-fit: fill;
+        background-repeat: no-repeat;
+
+        width: 100vw;
+    }
+
+    .panel .description .description-right {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .panel .panelMain .panelMain-header .panelMain-header-units {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-unit {
+        padding: 0;
+    }
+
+    .panel .panelMain .panelMain-header .panelMain-header-units .panelMain-header-unit h1 {
+        font-size: 1.3rem;
+    }
+
+    .panel .panelMain .panelMain-header {
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: fill;
+    }
+
+    .panel .about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .panel .about .about-left .about-left-btn {
+        width: 100%;
+    }
+
+    .panel .about .about-left .about-left-btn button:first-child {
+        width: 100%;
+    }
+
+    .panel .about .about-left .about-left-btn button:first-child a {
+        display: block;
+        width: 100%;
+    }
+
+    .panel .about .about-left .about-left-btn button {
+        width: 100%;
+    }
+
+    .panel .range {
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .panel .range .range-left {
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 674px) {
+    .panel .panelMain .panelMain-header .panelMain-header-text p {
+        font-size: .8rem;
+    }
+
+    .panel .description .description-right {
+        width: 93%;
+        margin: 0 auto;
+        padding-left: .5rem;
+    }
+
+    .panel .description .description-right .description-right-btn {
+        display: grid;
+        width: 80vw;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .panel .description .description-right .description-right-btn button {
+        width: 100%;
+    }
+
+    .panel .description .description-right .description-right-units {
+        grid-gap: 1rem;
+    }
+}

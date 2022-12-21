@@ -1,0 +1,192 @@
+.shop header {
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 5rem;
+    background-size: cover;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+.shop header .header-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding-bottom: 6rem;
+    width: 100%;
+}
+
+.shop header .header-text .header-text-main h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: .7rem;
+}
+
+.shop header .header-text .header-text-main h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+}
+
+.shop header .header-text .header-text-main button {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    padding: .7rem 8rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.shop .shop-slide h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    font-weight: lighter;
+}
+
+.next {
+    position: absolute;
+    top: 40%;
+    right: 1rem;
+    z-index: 100;
+    transform: translateY(-50%);
+}
+
+.prev {
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.next button,
+.prev button {
+    background-color: rgb(179, 179, 179);
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    width: 3rem;
+}
+
+.shop .acc {
+    height: 100vh;
+    width: 100vw;
+}
+
+.shop .acc .acc-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    object-fit: fill;
+    padding-bottom: 5rem;
+}
+
+.shop .acc .acc-item .acc-item-text h1 {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    font-weight: lighter;
+}
+
+.shop .acc .acc-item .acc-item-text button {
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: .7rem 6rem;
+}
+
+.shop .wear {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .7rem;
+    height: 85vh;
+    width: 100vw;
+}
+
+.shop .wear .wear-main {
+    height: 100%;
+    text-align: center;
+    padding-bottom: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
+.shop .wear .wear-main .wear-text h1 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.shop .wear .wear-main .wear-text button {
+    transform: translateY(2rem);
+    padding: .8rem 3rem;
+    background-color: transparent;
+    color: black;
+    transition: var(--transition);
+    border-radius: 4px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.shop .wear .wear-main .wear-text button:hover {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 968px) {
+    .shop header {
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 738px) {
+    .shop .wear {
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .shop .wear .wear-main {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 634px) {
+    .shop header .header-text .header-text-main h1 {
+        font-size: 1.7rem;
+    }
+
+    .shop header .header-text .header-text-main h3 {
+        font-size: .84rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .shop header {
+        background-position: 70%;
+    }
+}

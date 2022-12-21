@@ -1,0 +1,36 @@
+.footer {
+    padding: 2rem 0;
+    width: 100vw;
+    margin: 0rem auto;
+}
+
+.footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-links .footer-link {
+    font-size: .84rem;
+    color: var(--Primary-color);
+    padding: 0 .5rem;
+}
+
+@media screen and (max-width: 630px) {
+    .footer {
+        background-color: black;
+    }
+
+    .footer .footer-links {
+        display: block;
+        width: 100vw !important;
+    }
+
+    .footer .footer-links .footer-link {
+        display: block;
+        font-size: .9rem;
+        padding: .5rem 0;
+        color: white;
+        text-align: center;
+    }
+}

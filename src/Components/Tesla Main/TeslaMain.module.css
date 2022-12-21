@@ -1,0 +1,124 @@
+.main {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .main-text {
+    margin-top: 5rem;
+}
+
+.main .main-text h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: .6rem;
+}
+
+.main .main-text p {
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.main-btn {
+    transform: translateY(-4rem);
+}
+
+.main-btn button {
+    padding: .7rem 5rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.main-btn button:first-child {
+    padding: 0;
+    color: var(--white);
+    margin-top: -5rem;
+    background-color: rgba(23, 26, 32, .7);
+}
+
+.main-btn button:first-child a {
+    padding: .7rem 5rem;
+    color: var(--white);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.main-btn button:nth-child(2) {
+    margin-left: 2rem;
+    background-color: hsla(0, 0%, 100%, .7);
+}
+
+@media screen and (max-width: 836px) {
+    .main-btn button {
+        padding: .7rem 3rem;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        border-radius: 4px;
+    }
+
+    .main-btn button:first-child {
+        padding: 0;
+        color: var(--white);
+        margin-top: -5rem;
+        background-color: rgba(23, 26, 32, .7);
+    }
+
+    .main-btn button:first-child a {
+        padding: .7rem 3rem;
+        color: var(--white);
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 598px) {
+    .main-btn button {
+        padding: .7rem 3rem;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .main-btn button:first-child {
+        padding: 0;
+        color: var(--white);
+        background-color: rgba(23, 26, 32, .7);
+    }
+
+    .main-btn {
+        width: var(--max-width);
+    }
+
+    .main-btn button:first-child a {
+        padding: .7rem 3rem;
+        color: var(--white);
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-btn * {
+        display: block;
+    }
+
+    .main-btn button:nth-child(2) {
+        margin-left: 0rem;
+        margin-top: 1rem;
+        background-color: hsla(0, 0%, 100%, .7);
+    }
+}

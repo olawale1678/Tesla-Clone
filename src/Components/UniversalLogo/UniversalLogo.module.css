@@ -1,0 +1,9 @@
+.navIcon {
+    display: flex;
+    align-items: center;
+}
+
+.navIcon .icon {
+    height: 1.1rem;
+    width: 8.4rem;
+}

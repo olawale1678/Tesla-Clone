@@ -1,0 +1,209 @@
+.overview .overview-nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 3rem;
+    z-index: 1000;
+    background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+.overview .overview-nav .nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    width: var(--max-width);
+}
+
+.overview .overview-nav .nav .overview-location {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+
+.overview .overview-nav .nav .overview-location:hover {
+    background-color: rgba(194, 194, 194, 0.3);
+    border-radius: 5px;
+}
+
+.overview .overview-nav .nav .overview-location .icon {
+    font-size: 1.2rem;
+    margin-right: .8rem;
+}
+
+.overview .overview-nav .nav .overview-location a {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.overview .overview-body {
+    display: grid;
+    grid-template: "main aside" 1fr/7fr minmax(420px, 1fr);
+    /* grid-template-columns: 66% auto; */
+    height: 100vh;
+    position: relative;
+}
+
+.overview .overview-body .overview-left {
+    z-index: 10;
+}
+
+.overview .overview-body .overview-left div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.overview .overview-body .overview-left div .overview-left-img {
+    background-size: cover;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overview .overview-body .overview-right {
+    padding: 4rem 3rem;
+    overflow: scroll;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 25.6rem;
+}
+
+.overview .overview-body .overview-right h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.overview .overview-body .overview-right p {
+    font-size: .9rem;
+    letter-spacing: 1px;
+    margin-bottom: .6rem;
+}
+
+.overview .overview-body .overview-right .overview-right-forms {
+    width: 100%;
+
+}
+
+.overview .overview-body .overview-right .overview-right-forms label {
+    font-size: .9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 2rem;
+}
+
+.overview .overview-body .overview-right .overview-right-forms .overview-right-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(194, 194, 194, 0.6);
+    margin-top: .4rem;
+    padding: .6rem;
+    transition: var(--transition);
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.overview .overview-body .overview-right .overview-right-forms .overview-right-form input {
+    background-color: transparent;
+    width: 16rem;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.overview .overview-body .overview-right .overview-right-forms .overview-right-form .overview-right-form-icon {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    justify-content: center;
+}
+
+.overview .overview-body .overview-right .overview-right-link {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .overview-right-link a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: lighter;
+    transition: var(--transition);
+}
+
+.overview .overview-body .overview-right .overview-right-link a:hover {
+    font-weight: 600;
+}
+
+.overview .overview-body .overview-right .overview-right-btn {
+    text-align: center;
+    width: 100%;
+}
+
+.overview .overview-body .overview-right .overview-right-btn button {
+    width: 100%;
+    font-size: 1rem;
+    color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: .6rem 0;
+    background-color: #3e6ae1;
+}
+
+.overview .overview-body .overview-right .overview-right-btn button:hover {
+    background-color: #234bb9;
+}
+
+.overview .overview-body .overview-right p {
+    font-size: .8rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1020px) {
+    .overview .overview-body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 50%);
+        height: auto;
+        position: relative;
+    }
+
+    .overview .overview-body .overview-left {
+        z-index: 10;
+        height: 100vh;
+    }
+
+    .overview .overview-body .overview-right {
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 100vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        width: var(--md-width);
+    }
+}
+
+@media screen and (max-width: 752px) {
+    .overview .overview-body .overview-right {
+        width: 100vw;
+        top: 70vh;
+        padding: 4rem 1rem;
+    }
+
+    .overview .overview-body .overview-left {
+        z-index: 10;
+        height: 70vh;
+    }
+}

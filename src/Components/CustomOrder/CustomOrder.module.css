@@ -1,0 +1,913 @@
+.overview .overview-nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 3rem;
+    z-index: 1000;
+    background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+.overview .overview-nav .nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    width: var(--max-width);
+}
+
+.overview .overview-nav .nav .overview-location {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+
+.overview .overview-nav .nav .overview-location:hover {
+    background-color: rgba(194, 194, 194, 0.3);
+    border-radius: 5px;
+}
+
+.overview .overview-nav .nav .overview-location .icon {
+    font-size: 1.2rem;
+    margin-right: .8rem;
+}
+
+.overview .overview-nav .nav .overview-location a {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.overview .overview-body {
+    display: grid;
+    grid-template-columns: auto 26rem;
+    /* grid-template-columns: 66% auto; */
+    height: 100vh;
+}
+
+.overview .overview-body .overview-left {
+    z-index: 10;
+}
+
+.overview .overview-body .overview-left div .overview-left-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.overview .overview-body .overview-left div .overview-left-btn button {
+    padding: .3rem .3rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: rgba(194, 194, 194, 0.8);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    opacity: 0;
+}
+
+.overview .overview-body .overview-left div:hover .overview-left-btn .overview-left-btn-increment {
+    margin-right: 2rem;
+    opacity: 1;
+}
+
+.overview .overview-body .overview-left div:hover .overview-left-btn .overview-left-btn-decrement {
+    margin-left: 2rem;
+    opacity: 1;
+}
+
+.overview .overview-body .overview-left div .overview-left-btn .overview-left-btn-increment {
+    margin-right: 0rem;
+    opacity: 0;
+    transform: rotate(180deg);
+    transition: var(--transitions);
+}
+
+.overview .overview-body .overview-left div .overview-left-btn .overview-left-btn-decrement {
+    margin-left: 0rem;
+    transition: var(--transitions);
+    opacity: 0;
+}
+
+.overview .overview-body .overview-left div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.overview .overview-body .overview-left div .overview-left-img {
+    background-size: cover;
+    object-fit: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.overview .overview-body .overview-right {
+    padding: 4rem 3rem;
+    overflow: scroll;
+    z-index: 100;
+    width: 25.6rem;
+}
+
+.overview .overview-body .overview-right .notification {
+    background-color: rgba(194, 194, 194, 0.3);
+    display: grid;
+    padding: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: 5% auto;
+    border-radius: 4px;
+    margin-bottom: 6.6rem;
+}
+
+.overview .overview-body .overview-right .notification .notification-icon {
+    color: #3e6ae1;
+    font-size: 1.5rem;
+}
+
+.overview .overview-body .overview-right .notification .notification-text p {
+    font-size: .9rem;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+.overview .overview-body .overview-right .upgrade {
+    text-align: center;
+    margin-bottom: 9rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-text h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-text p {
+    font-size: .9rem;
+    letter-spacing: 1px;
+    margin-bottom: .6rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-text .link {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 2.6rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-text .link .upgrade-icon {
+    color: #3e6ae1;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-text .link a {
+    color: var(--primary-color);
+    border-bottom: 1px solid black;
+    margin-left: .4rem;
+    transition: var(--transition);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-text .link a:hover {
+    border-bottom: 2px solid black;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-btn {
+    background-color: rgba(194, 194, 194, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    padding: .2rem 0;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-btn button {
+    padding: .5rem 2rem;
+    cursor: pointer;
+    margin: 0;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: .75rem;
+    transition: var(--transition);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-btn .active {
+    background-color: white;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-units {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-units .upgrade-unit .upgrade-unit-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: .8rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-units .upgrade-unit .upgrade-unit-top h1 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-units .upgrade-unit .upgrade-unit-bottom p {
+    font-size: .8rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price {
+    margin-bottom: 8rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top {
+    margin-bottom: 2.2rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top h4 {
+    text-align: left;
+    margin-bottom: .7rem;
+    font-size: .8rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    border: 2px solid rgba(194, 194, 194, 0.6);
+    border-radius: 4px;
+    transition: var(--transition);
+    margin-bottom: 1rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top button.active {
+    border: 2px solid #3e6ae1;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top button p {
+    font-size: .9rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top p {
+    text-align: left;
+    font-size: .9rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top p a {
+    border-bottom: 1px solid black;
+    transition: var(--transition);
+    color: var(--primary-color);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-top p a:hover {
+    border-bottom: 2px solid black;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom h4 {
+    text-align: left;
+    margin-bottom: .7rem;
+    font-size: .8rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    border: 2px solid rgba(194, 194, 194, 0.6);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom button.active {
+    border: 2px solid #3e6ae1;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom button p {
+    font-size: .9rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .longrange {
+    background-color: rgba(194, 194, 194, 0.3);
+    border-radius: 4px;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    text-align: left;
+    font-size: .9rem;
+    padding: 1rem 1rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .longrange p {
+    color: rgb(167, 167, 167);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .available p {
+    margin-bottom: 1.6rem;
+    text-align: left;
+    font-size: .9rem;
+    color: rgb(150, 150, 150);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc {
+    margin-bottom: 5rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc p {
+    margin-bottom: 1.6rem;
+    font-size: .8rem;
+    line-height: 22px;
+    color: rgb(150, 150, 150);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc p>span {
+    font-size: 1.2rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc p a {
+    border-bottom: 1px solid black;
+    transition: var(--transition);
+    color: var(--primary-color);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc p a:hover {
+    border-bottom: 2px solid black;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc>a {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    background-color: rgba(194, 194, 194, 0.3);
+    transition: var(--transition);
+    border-radius: 4px;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .upgrade-price-bottom .desc>a:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .preformance-upgrade h1 {
+    font-size: 1.9rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .preformance-upgrade p {
+    margin-bottom: 1rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-price .preformance-upgrade li {
+    text-align: left;
+    list-style-type: disc;
+    letter-spacing: 1px;
+    line-height: 32px;
+    font-size: 1rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint {
+    margin-bottom: 9rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 2.5rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint .upgrade-paint-btn {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 2.5rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint .upgrade-paint-btn button {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transform: var(--transition);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint .upgrade-paint-btn button.active {
+    border: 4px solid var(--white);
+    outline: #3e6ae1 solid 3px;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint .upgrade-paint-btn button img {
+    height: 100%;
+    width: 100%;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint h4 {
+    font-size: 1.05rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-paint h4 span {
+    font-size: .9rem;
+    color: rgb(133, 133, 133);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 2.5rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-btn {
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-btn button {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 .3rem;
+    transform: var(--transition);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-btn button.active {
+    border: 4px solid var(--white);
+    outline: #3e6ae1 solid 3px;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-btn button img {
+    height: 100%;
+    width: 100%;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-label p {
+    font-size: 1rem;
+    margin-bottom: .7rem;
+    letter-spacing: 1px;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-label p span {
+    font-size: .8rem;
+    font-weight: lighter;
+    color: rgb(133, 133, 133);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-desc {
+    margin-bottom: 8rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-desc p {
+    font-size: .8rem;
+    font-weight: lighter;
+    color: rgb(133, 133, 133);
+    margin-bottom: .7rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-desc button {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    background-color: rgba(194, 194, 194, 0.3);
+    transition: var(--transition);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .8rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-wheel .upgrade-wheel-desc button:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 2.5rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-btn {
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-btn button {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 .3rem;
+    transform: var(--transition);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-btn button.active {
+    border: 4px solid var(--white);
+    outline: #3e6ae1 solid 3px;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-btn button img {
+    height: 100%;
+    width: 100%;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-label p {
+    font-size: 1rem;
+    margin-bottom: .7rem;
+    letter-spacing: 1px;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-label p span {
+    font-size: .8rem;
+    font-weight: lighter;
+    margin-left: .2rem;
+    color: rgb(133, 133, 133);
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-label button {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    background-color: rgba(194, 194, 194, 0.3);
+    transition: var(--transition);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .8rem;
+}
+
+.overview .overview-body .overview-right .upgrade .upgrade-int .upgrade-int-label button:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
+.overview .overview-body .overview-right .autopilot {
+    margin-bottom: 9rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item {
+    margin-bottom: 5rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item p {
+    font-size: .9rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item .autopilot-item-btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .7rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item .autopilot-item-btn button {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    background-color: rgba(194, 194, 194, 0.3);
+    transition: var(--transition);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .8rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item .autopilot-item-btn button:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item .autopilot-item-btn button:first-child {
+    background-color: #3e6ae1;
+    color: var(--white);
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-item .autopilot-item-btn button:hover:first-child {
+    background-color: #234bb9;
+}
+
+.overview .overview-body .overview-right .autopilot ul li {
+    text-align: left;
+    list-style-type: disc;
+    letter-spacing: 1px;
+    line-height: 32px;
+    font-size: 1rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc p {
+    font-size: .9rem;
+    text-align: center;
+    padding: .7rem 0;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc ul li:first-child {
+    line-height: 20px;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc h5 {
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: .7rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc .autopilot-desc-para {
+    text-align: left;
+    font-size: .8rem;
+    line-height: 18px;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc .autopilot-desc-btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .7rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc .autopilot-desc-btn button {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    background-color: rgba(194, 194, 194, 0.3);
+    transition: var(--transition);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .8rem;
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc .autopilot-desc-btn button:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc .autopilot-desc-btn button:first-child {
+    background-color: #3e6ae1;
+    color: var(--white);
+}
+
+.overview .overview-body .overview-right .autopilot .autopilot-desc .autopilot-desc-btn button:hover:first-child {
+    background-color: #234bb9;
+}
+
+.overview .overview-body .overview-right .charging h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .charging .charging-notification {
+    display: grid;
+    padding-right: 1rem;
+    text-align: left;
+    grid-gap: 1rem;
+    grid-template-columns: 5% auto;
+    border-radius: 4px;
+    margin: .6rem 0;
+}
+
+.overview .overview-body .overview-right .charging .charging-notification .charging-notification-icon {
+    color: #3e6ae1;
+    font-size: 1.5rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-notification p {
+    font-size: .9rem;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs {
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 9rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input .charging-input-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input:first-child {
+    margin-bottom: 1rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input:first-child .charging-input-left input {
+    cursor: pointer;
+    display: inline-block;
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+    border: 1px solid #808080;
+    background: #FFF;
+    margin-right: .8rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input:first-child .charging-input-left h4 {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input:nth-child(2) .charging-input-left input {
+    cursor: pointer;
+    display: inline-block;
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    margin-right: .8rem;
+    border: 1px solid #808080;
+    background: #FFF;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input:nth-child(2) .charging-input-left h4 {
+    transform: translateY(1rem);
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input:nth-child(2) .charging-input-left h4 span {
+    display: block;
+    font-size: .8rem;
+    margin-top: .3rem;
+    width: 13rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input .charging-input-left input:hover {
+    background-color: red;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-input .charging-input-left h4 {
+    font-size: .9rem;
+    font-weight: lighter;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-inputs-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-inputs-btn button {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    background-color: rgba(194, 194, 194, 0.3);
+    transition: var(--transition);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: .8rem;
+}
+
+.overview .overview-body .overview-right .charging .charging-inputs .charging-inputs-btn button:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
+.overview .overview-body .overview-right .order {
+    margin-bottom: 5rem;
+}
+
+.overview .overview-body .overview-right .order h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .order h5 {
+    font-size: .9rem;
+    text-align: center;
+    font-weight: lighter;
+    margin: 1.4rem 0;
+}
+
+.overview .overview-body .overview-right .order .order-btn {
+    text-align: center;
+}
+
+.overview .overview-body .overview-right .order .order-btn button {
+    text-align: center;
+    padding: 1rem 4rem;
+    border-radius: 4px;
+    background-color: #3e6ae1;
+    color: var(--white);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.overview .overview-body .overview-right .order .order-btn button:hover {
+    background-color: #234bb9;
+}
+
+.overview .overview-body .overview-right .order p {
+    font-size: .9rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.overview .overview-body .overview-right .order a {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: .7rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.overview .overview-body .overview-right .order a:hover {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1020px) {
+    .overview .overview-body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 50%);
+        height: auto;
+        position: relative;
+    }
+
+    .overview .overview-body .overview-left {
+        z-index: 10;
+        height: 100vh;
+    }
+
+    .overview .overview-body .overview-right {
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top: 100vh;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        width: var(--md-width);
+    }
+
+    .overview .overview-body .overview-right .upgrade .overview-left {
+        height: 50vh;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 752px) {
+    .overview .overview-body .overview-right {
+        width: 100vw;
+        top: 70vh;
+        padding: 4rem 1rem;
+    }
+
+    .overview .overview-body .overview-left {
+        z-index: 10;
+        height: 70vh;
+    }
+}

@@ -1,0 +1,164 @@
+nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100vw;
+    height: 3rem;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+.secondNav {
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+nav .subNav {
+    justify-content: space-between;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: var(--max-width);
+    margin: 0 auto;
+}
+
+nav .subNav .navLinks-left .cancle {
+    display: none;
+}
+
+nav .subNav .navLinks-left ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .subNav .navLinks-left ul li {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+nav .subNav .navLinks-left ul li a {
+    padding: .5rem 1rem;
+    transition: all .25s ease-in-out;
+    color: var(--primary-color);
+}
+
+nav .subNav .navLinks-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .subNav .navLinks-right ul li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+nav .subNav .navLinks-right ul li a {
+    padding: .5rem 1rem;
+    transition: all .25s ease-in-out;
+    color: var(--primary-color);
+}
+
+nav .subNav .navLinks-left ul li a:hover,
+nav .subNav .navLinks-right ul li a:hover {
+    background-color: rgba(194, 194, 194, 0.7);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    nav .subNav .navLinks-left {
+        position: fixed;
+        top: 0rem;
+        width: 20rem;
+        right: 0;
+        transition: var(--transitions);
+        height: 100vh;
+        padding: 0 1.5rem;
+        transform: translateX(100rem);
+    }
+
+    nav .subNav .show {
+        position: fixed;
+        top: 0rem;
+        width: 20rem;
+        transition: var(--transitions);
+        right: 0;
+        height: 100vh;
+        padding: 0 1.5rem;
+        background-color: white;
+        transform: translateX(0);
+    }
+
+    nav .subNav .navLinks-left .cancle {
+        font-size: 1.7rem;
+        text-align: right;
+        display: block;
+        padding-top: 1rem;
+    }
+
+    nav .subNav .navLinks-left ul {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    nav .subNav .navLinks-left ul li {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+
+    nav .subNav .navLinks-left ul li a {
+        padding: .6rem 0;
+        border-radius: 4px;
+        padding-left: .4rem;
+        display: block;
+    }
+
+    nav .subNav .show .cancle {
+        font-size: 1.7rem;
+        text-align: right;
+        cursor: pointer;
+        display: block;
+        padding-top: .6rem;
+    }
+
+    nav .subNav .show ul {
+        display: block;
+        width: 100%;
+        margin-top: 1.4rem;
+    }
+
+    nav .subNav .show ul li {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+
+    nav .subNav .show ul li a {
+        padding: .6rem 0;
+        border-radius: 4px;
+        padding-left: .4rem;
+        display: block;
+        color: black;
+        transform: var(--transition);
+    }
+
+    nav .subNav .show ul li a:hover {
+        background-color: rgba(194, 194, 194, 0.7);
+        border-radius: 4px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    nav .subNav .navLinks-right ul li a {
+        font-size: .7rem;
+    }
+}
